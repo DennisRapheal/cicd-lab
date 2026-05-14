@@ -29,3 +29,10 @@ docker compose up -d --build
 git add .
 git commit -m "ci: add github actions: type check, test and build steps"
 git push origin feature/ci-observe
+
+# npm test error
+# test/app.test.ts
+expect(response.json()).toEqual({ status: 'fail' });
+git add .
+git commit -m "ci: add github actions: npm test error"
+git push origin feature/ci-observe
