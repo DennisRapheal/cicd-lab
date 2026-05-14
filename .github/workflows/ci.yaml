@@ -34,15 +34,6 @@ jobs:
         run: npm ci
 
       # add your steps here, e.g. lint, test, build etc.
-      - name: Type check
-        run: npm run typecheck
-
-      - name: Run tests
-        run: npm test
-
-      - name: Build app
-        run: npm run build
-
 
       - name: Compute image tag
         id: meta
@@ -68,8 +59,6 @@ jobs:
       - name: Build Docker image
         if: ${{ matrix.node-version == '24' }}
         run: docker build -t my-app:${{ steps.meta.outputs.image_tag }} .
-      
-
 
   cd:
     if: ${{ startsWith(github.ref, 'refs/heads/release/') }}
