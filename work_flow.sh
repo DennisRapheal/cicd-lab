@@ -56,6 +56,12 @@ git commit -m "ci: add github actions: fix prettier format issues"
 git push origin feature/ci-observe
 
 
+# only modify app.test.ts: expect(response.json()).toEqual({ status: 'ok' }); -> expect(response.json()).toEqual({ status: 'fail' });
 git add .
 git commit -m "ci: add github actions: show wrong npm test result"
+git push origin feature/ci-observe
+
+# only modify src/app.ts: const configuredPort: number = process.env.PORT || '3000'; -> const configuredPort: number = process.env.PORT;
+git add .
+git commit -m "ci: add github actions: show wrong TypeScript test result"
 git push origin feature/ci-observe
