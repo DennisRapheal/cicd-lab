@@ -54,3 +54,8 @@ npx prettier --write snippets/02_run-test.yaml
 git add .
 git commit -m "ci: add github actions: fix prettier format issues"
 git push origin feature/ci-observe
+
+
+git add .
+git commit -m "ci: add github actions: show wrong npm test result"
+git push origin feature/ci-observe
