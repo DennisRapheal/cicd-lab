@@ -67,5 +67,5 @@ git commit -m "ci: add github actions: show wrong TypeScript test result"
 git push origin feature/ci-observe
 
 git add .
-git commit -m "fix"
+git commit -m "fix error"
 git push origin feature/ci-observe
