@@ -1,7 +1,7 @@
 import Fastify, { FastifyServerOptions } from 'fastify';
 
 export function buildApp(options: FastifyServerOptions = {}) {
-  const configuredPort: number = process.env.PORT;
+  const configuredPort: number = process.env.PORT || '3000';
 
   const app = Fastify({
     logger: options.logger ?? true,
